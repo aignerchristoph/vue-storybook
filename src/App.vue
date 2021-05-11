@@ -1,20 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <Button />
+    <MultiPills :pillsData="pillsData" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import Button from "./stories/Button";
+import MultiPills from "./components/MultiPills";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
-    Button,
+    MultiPills,
+  },
+  data() {
+    return {
+      pillsData: [],
+    };
+  },
+  created() {
+    this.pillsData = [
+      {
+        label: "Ägypten",
+        price: 342,
+        url: "https://www.restplatzboerse.at/urlaub/aegypten-lid-143/",
+      },
+      {
+        label: "Spanien",
+        price: 342,
+        url: "https://www.restplatzboerse.at/urlaub/aegypten-lid-143/",
+      },
+      {
+        label: "Griechenland",
+        price: 342,
+        url: "https://www.restplatzboerse.at/urlaub/aegypten-lid-143/",
+      },
+      {
+        label: "Alle Reiseziele",
+        url: "https://www.restplatzboerse.at/urlaub/",
+      },
+    ];
   },
 };
 </script>
