@@ -27,7 +27,6 @@ export default {
   border-radius: 3rem;
   transition: all 0.4s ease;
   margin: 1rem;
-  font-family: "Open Sans,Helvetica,Arial,sans-serif";
 }
 
 .price {
